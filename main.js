@@ -5,7 +5,7 @@ const http = require('request-promise-native');
 const config = require('./config.json');
 const fs = require('fs-extra');
 
-const cache = JSON.parse(fs.readFileSync('./cache.json', "utf8") || "{}");
+const cache = fs.readJsonSync('./cache.json', { throws: false }) || {};
 const cachedIp = cache.ip || '';
 
 const headers = () => {
