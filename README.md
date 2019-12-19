@@ -1,0 +1,11 @@
+# godaddy_ddns
+A node script to update dns records via the GoDaddy api.
+
+Support multiple domains and multiple entries per domain.
+
+GoDaddy customers can obtain values for the "key" and "secret" config by creating a production key at https://developer.godaddy.com/keys/
+
+# Start using:
+- Rename config.json.sample to config.json and configure it as needed
+- Go to project folder and run: npm install
+- Then, put it in an cron or run manually: node index.js
