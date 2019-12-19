@@ -1,0 +1,28 @@
+{
+    "key": "XXXXXXXXXXXX",
+    "secret": "XXXXXXXXXXXX",
+    "entries": [
+        {
+            "domain": "domain.com.br",
+            "entries": [
+                {
+                    "type": "A",
+                    "name": "@"
+                },
+                {
+                    "type": "A",
+                    "name": "www"
+                }
+            ]
+        },
+        {
+            "domain": "domain.com",
+            "entries": [
+                {
+                    "type": "A",
+                    "name": "@"
+                }
+            ]
+        }
+    ]
+}
