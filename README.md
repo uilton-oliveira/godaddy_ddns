@@ -8,4 +8,7 @@ GoDaddy customers can obtain values for the "key" and "secret" config by creatin
 # Usage:
 - Rename config.json.sample to config.json and configure it as needed
 - Go to project folder and run: npm install
-- Then, put it in an cron or run manually: node index.js
+- Then, put it in an cron or run manually: npm start
+
+**Docker run example (short lived):**  
+docker run -it --rm -v "$(pwd)/data:/ddns/data" uilton/godaddy_ddns:latest

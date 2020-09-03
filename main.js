@@ -2,10 +2,11 @@
 export {}
 
 const http = require('request-promise-native');
-const config = require('./config.json');
+const config = require('./data/config.json');
 const fs = require('fs-extra');
 
-const cache = fs.readJsonSync('./cache.json', { throws: false }) || {};
+const cacheLocation = './data/cache.json';
+const cache = fs.readJsonSync(cacheLocation, { throws: false }) || {};
 const cachedIp = cache.ip || '';
 
 const headers = () => {
@@ -62,9 +63,9 @@ const updateIp = (domains, ip) => {
     });
     return Promise.all(promises);
 };
-//
+
 const syncCachedIp = (ip) => {
-    fs.writeJsonSync('./cache.json', { ip: ip })
+    fs.writeJsonSync(cacheLocation, { ip: ip })
 };
 
 const filterUpdatedIps = (domains, ip) => {
