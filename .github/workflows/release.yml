@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: darksupremo/godaddy_dns
+  IMAGE_NAME: darksupremo/godaddy_ddns
   
 jobs:
   build-docker:
